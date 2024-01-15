@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: health-110
+  description: test description
+  annotations:
+    argocd/app-name: health-110-dev
+    tektonci/build-namespace: health-110-develop
+    backstage.io/kubernetes-id: health-110
+    janus-idp.io/tekton-enabled : 'true'
+    janus-idp.io/tekton : health-110
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: skitamura-org/health-110-app
+    sonarqube.org/project-key: default
+spec:
+  type: service 
+  system: "system:default/sample-system"
+  lifecycle: production
+  owner: "group:default/skitamura7446"
+  git: github
+  git_host_url: github.com
+  git_owner_name: skitamura-org
